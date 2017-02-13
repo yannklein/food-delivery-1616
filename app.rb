@@ -3,19 +3,19 @@
 #   ruby app.rb
 
 
-require_relative "app/repositories/customers_repository"
+require_relative "app/repositories/customer_repository"
 require_relative "app/controllers/customers_controller"
-require_relative "app/repositories/meals_repository"
+require_relative "app/repositories/meal_repository"
 require_relative "app/controllers/meals_controller"
 require_relative "router"
 
 customers_csv = "data/customers.csv"
-customer_repository = CustomersRepository.new(customers_csv)
+customer_repository = CustomerRepository.new(customers_csv)
 customers_controller = CustomersController.new(customer_repository)
 
 meals_csv = "data/meals.csv"
-meals_repository = MealsRepository.new(meals_csv)
-meals_controller = MealsController.new(meals_repository)
+meal_repository = MealRepository.new(meals_csv)
+meals_controller = MealsController.new(meal_repository)
 router = Router.new(meals_controller, customers_controller)
 
 router.run
