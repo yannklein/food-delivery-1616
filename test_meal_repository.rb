@@ -1,6 +1,8 @@
-require_relative "app/repositories/meal_repository"
+require_relative 'app/repositories/meal_repository'
 
-csv_file = "data/meals.csv"
-repo = MealRepository.new(csv_file)
+csv_path = 'data/meals.csv'
+repo = MealRepository.new(csv_path)
 
-repo.add(Meal.new(name: "Regina", price: 10))
+repo.add(Meal.new(name: 'Regina', price: 10))
+
+p repo

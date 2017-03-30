@@ -8,7 +8,7 @@ class Router
   end
 
   def run
-    while @running do
+    while @running
       @employee = @sessions_controller.sign_in
       while @employee
         if @employee.manager?
@@ -28,12 +28,12 @@ class Router
   private
 
   def print_manager_menu
-    puts "1. Add a meal"
-    puts "2. List available meals"
-    puts "3. Add a customer"
-    puts "4. List customers"
-    puts "8. Sign out"
-    puts "9. Exit"
+    puts '1. Add a meal'
+    puts '2. List available meals'
+    puts '3. Add a customer'
+    puts '4. List customers'
+    puts '8. Sign out'
+    puts '9. Exit'
   end
 
   def route_manager_action(action)
@@ -47,33 +47,33 @@ class Router
       @employee = nil
       @running = false
     else
-      puts "Wrong action"
+      puts 'Wrong action'
     end
   end
 
   def print_delivery_guy_menu
-    puts "1. List my orders"
-    puts "2. Mark an ordered as delivered"
-    puts "8. Sign out"
-    puts "9. Exit"
+    puts '1. List my orders'
+    puts '2. Mark an ordered as delivered'
+    puts '8. Sign out'
+    puts '9. Exit'
   end
 
   def route_delivery_guy_action(action)
     case action
-    when 1 then puts "TODO: list delivery guy orders"
-    when 2 then puts "TODO: mark as delivered"
+    when 1 then puts 'TODO: list delivery guy orders'
+    when 2 then puts 'TODO: mark as delivered'
     when 8 then @employee = nil
     when 9
       @employee = nil
       @running = false
     else
-      puts "Wrong action"
+      puts 'Wrong action'
     end
   end
 
   def ask_user_for_action
-    puts "What do you want to do next?"
-    print "> "
-    return gets.chomp.to_i
+    puts 'What do you want to do next?'
+    print '> '
+    gets.chomp.to_i
   end
 end
