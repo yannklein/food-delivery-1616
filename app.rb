@@ -15,6 +15,6 @@ customers_controller = CustomersController.new(customer_repository)
 meals_csv = 'data/meals.csv'
 meal_repository = MealRepository.new(meals_csv)
 meals_controller = MealsController.new(meal_repository)
-router = Router.new(meals_controller, customers_controller)
 
+router = Router.new(meals_controller, customers_controller)
 router.run
