@@ -9,8 +9,8 @@ class Router
       # 1. Print the menu
       print_menu
       # 2. Ask the user what he/she wants to do next?
-      puts "What do you want to do next?"
-      print "> "
+      puts 'What do you want to do next?'
+      print '> '
       action = gets.chomp.to_i
       # 3. Call the right controller method
       case action
@@ -19,7 +19,7 @@ class Router
       when 3 then @customers_controller.add
       when 4 then @customers_controller.list
       else
-        puts "Wrong action"
+        puts 'Wrong action'
       end
     end
   end
@@ -27,9 +27,9 @@ class Router
   private
 
   def print_menu
-    puts "1. Add a meal"
-    puts "2. List available meals"
-    puts "3. Add a customer"
-    puts "4. List customers"
+    puts '1. Add a meal'
+    puts '2. List available meals'
+    puts '3. Add a customer'
+    puts '4. List customers'
   end
 end

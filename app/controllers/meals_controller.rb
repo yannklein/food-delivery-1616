@@ -1,5 +1,5 @@
-require_relative "../models/meal"
-require_relative "../views/meals_view"
+require_relative '../models/meal'
+require_relative '../views/meals_view'
 
 class MealsController
   # User actions?
@@ -27,6 +27,3 @@ class MealsController
     @view.display(meals)
   end
 end
-
-
-
