@@ -7,6 +7,10 @@ class BaseRepository
     @next_id = 1
     load_csv if File.exist?(@csv_file)
   end
+  
+  def find(id)
+    @elements.find { |element| element.id == id }
+  end
 
   def add(element)
     element.id = @next_id
