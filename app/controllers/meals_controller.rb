@@ -1,29 +1,28 @@
-require_relative '../models/meal'
 require_relative '../views/meals_view'
+require_relative '../models/meal'
 
 class MealsController
-  # User actions?
-
-  def initialize(meal_repository)
-    @meal_repository = meal_repository
-    @view = MealsView.new
-  end
-
-  def add
-    # 1. Ask the user about the meal name
-    name = @view.ask_for(:name)
-    # 2. Ask the user about the price
-    price = @view.ask_for_price
-    # 3. Build a meal instance
-    new_meal = Meal.new(name: name, price: price)
-    # 4. Give the meal to the MealRepository
-    @meal_repository.add(new_meal)
+  def initialize(meal_repo)
+    @meal_repo = meal_repo
+    @meal_view = MealsView.new
   end
 
   def list
-    # 1. Ask the repo for meals list
-    meals = @meal_repository.all
-    # 2. Ask the view to print meals
-    @view.display(meals)
+    display_meals
+  end
+
+  def add
+    name = @meal_view.ask_user_for(:name)
+    price = @meal_view.ask_user_for(:price).to_i
+    meal = Meal.new(name: name, price: price)
+    @meal_repo.add(meal)
+    display_meals
+  end
+
+  private
+
+  def display_meals
+    meals = @meal_repo.all
+    @meal_view.display(meals)
   end
 end
