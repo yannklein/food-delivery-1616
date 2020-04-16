@@ -1,5 +1,5 @@
-require 'csv'
-require_relative '../models/meal'
+require "csv"
+require_relative "../models/meal"
 
 class MealRepository
   def initialize(csv_file)
@@ -27,7 +27,7 @@ class MealRepository
   private
 
   def save_csv
-    CSV.open(@csv_file, 'wb') do |csv|
+    CSV.open(@csv_file, "wb") do |csv|
       csv << %w[id name price]
       @meals.each do |meal|
         csv << [meal.id, meal.name, meal.price]
@@ -41,8 +41,7 @@ class MealRepository
       row[:id] = row[:id].to_i
       row[:price] = row[:price].to_i
       @meals << Meal.new(row)
-      @next_id = row[:id]
     end
-    @next_id += 1
+    @next_id = @meals.last.id + 1 unless @meals.empty?
   end
 end

@@ -1,5 +1,5 @@
-require_relative '../views/customers_view'
-require_relative '../models/customer'
+require_relative "../views/customers_view"
+require_relative "../models/customer"
 
 class CustomersController
   def initialize(customer_repo)
