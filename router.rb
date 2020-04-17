@@ -24,7 +24,7 @@ class Router
     puts "2. Add new meal"
     puts "3. List all customers"
     puts "4. Add new customer"
-    puts "5. Exit"
+    puts "8. Exit"
     print "> "
   end
 
@@ -34,7 +34,7 @@ class Router
     when 2 then @meals_controller.add
     when 3 then @customers_controller.list
     when 4 then @customers_controller.add
-    when 5 then stop!
+    when 8 then stop!
     else
       puts "Try again..."
     end

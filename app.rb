@@ -1,7 +1,7 @@
 require_relative "app/repositories/meal_repository"
 require_relative "app/controllers/meals_controller"
-require_relative "app/controllers/customers_controller"
 require_relative "app/repositories/customer_repository"
+require_relative "app/controllers/customers_controller"
 require_relative "router"
 
 
