@@ -49,7 +49,7 @@ describe "CustomersController", :customer do
     end
   end
 
-    describe "#list" do
+  describe "#list" do
     it "should grab customers from the repo and display them" do
       controller = CustomersController.new(repository)
       customers.drop(1).each do |customer_array|

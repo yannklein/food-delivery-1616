@@ -1,3 +1,4 @@
+require "pry-byebug"
 require_relative "../views/meals_view"
 require_relative "../models/meal"
 
@@ -11,7 +12,7 @@ class MealsController
     name = @meals_view.ask_user_for(:name)
     price = @meals_view.ask_user_for(:price).to_i
     meal = Meal.new(name: name, price: price)
-    @meal_repo.add(meal)
+    @meal_repository.add(meal)
     display_meals
   end
 
@@ -22,7 +23,7 @@ class MealsController
   private
 
   def display_meals
-    meals = @meal_repo.all
+    meals = @meal_repository.all
     @meals_view.display(meals)
   end
 end
