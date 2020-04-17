@@ -10,15 +10,6 @@ class Employee
     @orders = []
   end
 
-  def undelivered_orders
-    @orders.reject(&:delivered?)
-  end
-
-  def add_order(order)
-    order.employee = self
-    @orders << order
-  end
-
   def manager?
     @role == "manager"
   end
