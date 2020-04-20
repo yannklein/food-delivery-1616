@@ -16,6 +16,7 @@ class Router
           route_delivery_guy_action
         end
       end
+      print `clear`
     end
   end
 
