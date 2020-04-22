@@ -35,8 +35,7 @@ class Router
     when 3 then @customers_controller.add
     when 4 then @customers_controller.list
     when 8 then stop!
-    else
-      puts "Try again..."
+    else puts "Try again..."
     end
   end
 
