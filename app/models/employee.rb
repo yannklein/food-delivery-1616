@@ -7,7 +7,6 @@ class Employee
     @username = attributes[:username]
     @password = attributes[:password]
     @role = attributes[:role]
-    @orders = []
   end
 
   def manager?
