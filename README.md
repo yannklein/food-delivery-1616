@@ -1,6 +1,6 @@
 ### Food Delivery challenge solution
 
-Each branch represents a snapshot of the codebase during the two-day progression.
+Each branch of the repository represents a snapshot of the codebase during the two-day progression.
 
 In the current `livecode-day-one` branch, the implemented user actions are:
 
