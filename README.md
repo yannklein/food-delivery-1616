@@ -1,4 +1,4 @@
-# This repository holds the solutions of the Food Delivery challenge
+### Food Delivery challenge solution
 
 Each branch represents a snapshot of the codebase during the two-day progression.
 
