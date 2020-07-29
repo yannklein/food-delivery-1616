@@ -2,11 +2,8 @@ require_relative "app/repositories/meal_repository"
 require_relative "app/controllers/meals_controller"
 require_relative "app/repositories/customer_repository"
 require_relative "app/controllers/customers_controller"
-<<<<<<< HEAD
 require_relative "app/repositories/employee_repository"
 require_relative "app/controllers/sessions_controller"
-=======
->>>>>>> livecode-day-one
 require_relative "router"
 
 
