@@ -16,8 +16,8 @@ class EmployeeRepository
     @employees.find { |employee| employee.id == id }
   end
 
-  def all_delivery_guys
-    @employees.select { |employee| employee.delivery_guy? }
+  def all_riders
+    @employees.select { |employee| employee.rider? }
   end
 
   private

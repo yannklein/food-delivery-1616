@@ -13,7 +13,7 @@ class Router
         if @current_user.manager?
           route_manager_action
         else
-          route_delivery_guy_action
+          route_rider_action
         end
       end
       print `clear`
@@ -29,11 +29,11 @@ class Router
     manager_action(choice)
   end
 
-  def route_delivery_guy_action
-    print_delivery_guy_menu
+  def route_rider_action
+    print_rider_menu
     choice = gets.chomp.to_i
     print `clear`
-    delivery_guy_action(choice)
+    rider_action(choice)
   end
 
   def print_manager_menu
@@ -51,7 +51,7 @@ class Router
     print "> "
   end
 
-  def print_delivery_guy_menu
+  def print_rider_menu
     puts "--------------------"
     puts "------- MENU -------"
     puts "--------------------"
@@ -78,7 +78,7 @@ class Router
     end
   end
 
-  def delivery_guy_action(choice)
+  def rider_action(choice)
     case choice
     when 1 then @meals_controller.add
     when 2 then @meals_controller.list
