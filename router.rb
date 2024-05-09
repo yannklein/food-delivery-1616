@@ -46,11 +46,13 @@ class Router
     puts "4. List all customers"
     puts "5. Add new order"
     puts "6. List all undelivered orders"
-    puts "7. Log out"
-    puts "8. Exit"
+    puts "7. Add a new order"
+    puts "8. List all the undelivered orders"
+    puts "9. Log out"
+    puts "10. Exit"
     print "> "
   end
-
+  
   def print_rider_menu
     puts "--------------------"
     puts "------- MENU -------"
@@ -59,8 +61,10 @@ class Router
     puts "2. List all meals"
     puts "3. Add new customer"
     puts "4. List all customers"
-    puts "5. Log out"
-    puts "6. Exit"
+    puts "5. Mark one of my orders as delivered"
+    puts "6. List all my undelivered orders"
+    puts "7. Log out"
+    puts "8. Exit"
     print "> "
   end
 
