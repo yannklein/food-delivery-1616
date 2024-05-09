@@ -38,6 +38,7 @@ Order schema:
 +--------------------+
 ```
 
+
 - [X] As an employee, I can log in
 - [X] As a manager, I can add a new meal
 - [X] As a manager, I can list all the meals
