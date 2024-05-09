@@ -46,10 +46,8 @@ class Router
     puts "4. List all customers"
     puts "5. Add new order"
     puts "6. List all undelivered orders"
-    puts "7. Add a new order"
-    puts "8. List all the undelivered orders"
-    puts "9. Log out"
-    puts "10. Exit"
+    puts "7. Log out"
+    puts "8. Exit"
     print "> "
   end
   
@@ -88,8 +86,10 @@ class Router
     when 2 then @meals_controller.list
     when 3 then @customers_controller.add
     when 4 then @customers_controller.list
-    when 5 then logout!
-    when 6 then stop!
+    when 5 then puts "TODO"
+    when 6 then puts "TODO"
+    when 7 then logout!
+    when 8 then stop!
     else puts "Try again..."
     end
   end
