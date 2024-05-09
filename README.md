@@ -1,8 +1,38 @@
-### Food Delivery challenge solution
+### Food Delivery challenge day 2
 
-Each branch of the repository represents a snapshot of the codebase during the two-day progression.
+```
+        _______________________________________________________
+       |                                                      |
+       |   App                )\._.,--...,'``.                |
+       |                    /,   _.. \   _\  (`._ ,.          |
+       |                   `._.-(,_..'--(,_..'`-.;.'          |
+       |                    |     Router     |                |
+       |                    |________________|                |
+       |                            |                         |
+       |                     _______\/_______                 |
+       |   _________        |                |                |
+       |  | 1.Model |       |  3.Controller  |                |
+       |  |_________|       |________________|                |
+       |        \             /            \                  |
+       |         \___________\/_        ___\/______________   |
+ ___   |         |              |      |                   |  |
+|CSV|<---- ----->| 2.Repository |      | 4.View(puts,gets) |  |
+'---'  |         |______________|      |___________________|  |
+       |______________________________________________________|
+```
 
-In the current `lecture-day-two` branch, the implemented user actions are:
+Order schema:
+
+```
++--------------------+
+|       Order        |
++--------------------+
+| @id                |
+|                    |
++--------------------+
+|                    |
++--------------------+
+```
 
 - [X] As an employee, I can log in
 - [X] As a manager, I can add a new meal
@@ -13,12 +43,3 @@ In the current `lecture-day-two` branch, the implemented user actions are:
 - [ ] As a manager, I can list all the undelivered orders
 - [ ] As a rider, I can mark one of my orders as delivered
 - [ ] As a rider, I list all my undelivered orders
-
-+--------------------+
-|       Order        |
-+--------------------+
-| @id                |
-|                    |
-+--------------------+
-|                    |
-+--------------------+
